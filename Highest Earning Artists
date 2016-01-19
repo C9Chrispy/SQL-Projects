@@ -1,0 +1,59 @@
+CREATE TABLE electronic_music(id INTEGER PRIMARY KEY, title TEXT, artist TEXT, price INTEGER, metascore INTEGER, albums_sold INTEGER);
+
+INSERT INTO electronic_music VALUES(1, "Motion", "Calvin Harris", 10, 57, 433945);
+
+INSERT INTO electronic_music VALUES(2, "Listen", "David Guetta", 18, 51, 603000);
+
+INSERT INTO electronic_music VALUES(3, "Club Life Vol. 4", "Tiesto", 14, 55, 335000);
+
+INSERT INTO electronic_music VALUES(4, "Skrillex and Diplo Present Jack U", "Diplo/Skrillex", 18, 70, 2500000);
+
+INSERT INTO electronic_music VALUES(5, "Purpose", "Justin Bieber/Diplo", 12, 63, 5200000); 
+
+CREATE TABLE rap_music(id INTEGER PRIMARY KEY, title TEXT, artist TEXT, price INTEGER, metascore INTEGER, albums_sold INTEGER);
+
+INSERT INTO rap_music VALUES(1, "MMM", "Diddy", 0, 71, 800000);
+
+INSERT INTO rap_music VALUES(2, "Magna Carta...Holy Grail", "Jay-Z", 25, 60, 2100000);
+
+INSERT INTO rap_music VALUES(3, "What A Time To Be Alive", "Drake", 10, 70, 1000000);
+
+INSERT INTO rap_music VALUES(4, "To Pimp a Butterfly", "Kendrick Lamar", 19, 96, 1000000);
+
+INSERT INTO rap_music VALUES(5, "Because the Internet", "Childish Gambino", 12, 64, 520000);
+
+CREATE TABLE pop_music(id INTEGER PRIMARY KEY, title TEXT, artist TEXT, price INTEGER, metascore INTEGER, albums_sold INTEGER);
+
+INSERT INTO pop_music VALUES(1, "PRISM", "Katy Perry", 17, 61, 4000000);
+
+INSERT INTO pop_music VALUES(2, "Made in the A.M.", "One Direction", 20, 65, 1185000);
+
+INSERT INTO pop_music VALUES(3, "1989", "Taylor Swift", 15, 76, 8121182);
+
+INSERT INTO pop_music VALUES(4, "The 20/20 Experience", "Justin Timberlake", 14, 80, 6900000);
+
+INSERT INTO pop_music VALUES(5, "Cheek to Cheek", "Lady Gaga", 15, 64, 877000);
+
+INSERT INTO pop_music VALUES(6, "X", "Ed Sheeran", 19, 67, 10500000);
+
+INSERT INTO pop_music VALUES(7, "Beyonce", "Beyonce", 25, 85, 5000000);
+
+INSERT INTO pop_music VALUES(8, "To Be Loved", "Michael Buble", 12, 55, 2856000);
+
+INSERT INTO pop_music VALUES(9, "Unorthodox Jukebox", "Bruno Mars", 19, 70, 4200000);
+
+INSERT INTO pop_music VALUES(10, "V (Deluxe)", "Maroon 5", 15, 55, 13500000);
+
+SELECT * FROM  electronic_music ORDER BY metascore DESC;
+
+SELECT * FROM rap_music ORDER BY metascore DESC;
+
+SELECT * FROM pop_music ORDER BY metascore DESC;
+
+SELECT sum(albums_sold) FROM electronic_music;
+
+SELECT sum(albums_sold) FROM rap_music;
+
+SELECT sum(albums_sold) FROM pop_music;
+
+
